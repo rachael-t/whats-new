@@ -10,7 +10,6 @@ class Menu extends Component {
     };
 
     handleChange = (e) => {
-        // this.setState({selected: e.target.name})
         let selectedTopic = e.target.name;
         this.props.changeSelectedNews(selectedTopic)
     }
@@ -18,7 +17,7 @@ class Menu extends Component {
     render() {
         return(
             <div className='menu-container'>
-                <h1>What's New</h1>
+                <h1>What's New?</h1>
                 <nav>
                     <button onClick={this.handleChange} name='local'>Local</button>
                     <button onClick={this.handleChange} name='entertainment'>Entertainment</button>
