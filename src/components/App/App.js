@@ -6,19 +6,26 @@ import science from '../../data/science';
 import technology from '../../data/technology';
 import './App.css';
 import NewsContainer from '../NewsContainer/NewsContainer';
+import Menu from '../Menu/Menu';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      local
+      selected: local
     }
+  }
+
+  changeSelectedNews = (selectedTopic) => {
+    console.log(selectedTopic)
+    this.setState({selected: selectedTopic})
   }
 
   render () {
     return (
       <div className="app">
-        <NewsContainer selectedNews={this.state.local} />
+        <Menu changeSelectedNews={this.changeSelectedNews}/>
+        <NewsContainer selectedNews={this.state.selected} />
       </div>
     );
   }
