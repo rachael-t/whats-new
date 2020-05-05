@@ -2,15 +2,15 @@ import React from 'react';
 import './NewsContainer.css'
 import NewsArticle from '../NewsArticle/NewsArticle'
 
-const NewsContainer = ({ selectedNews }) => {
-    const newsArticlesToRender = selectedNews.map(newsArticle => {
+const NewsContainer = (props) => {
+    const newsArticlesToRender = props.selectedNews.map(newsArticle => {
         return (
-            <article>
-                <img src={newsArticle.img} alt=''/>
-                <h3>{newsArticle.headline}</h3>
-                <p>{newsArticle.description}</p>
-                <a href={newsArticle.url}>Link to Article</a>
-            </article>
+           <NewsArticle 
+                image={newsArticle.img}
+                headline={newsArticle.headline}
+                description={newsArticle.description}
+                link={newsArticle.url}
+           />
         )
     })
     return (
