@@ -1,5 +1,6 @@
 import React from 'react';
 import './NewsContainer.css'
+import NewsArticle from '../NewsArticle/NewsArticle'
 
 const NewsContainer = ({ selectedNews }) => {
     const newsArticlesToRender = selectedNews.map(newsArticle => {
