@@ -11,6 +11,11 @@ import Menu from '../Menu/Menu';
 class App extends Component {
   constructor() {
     super();
+    this.local = local;
+    this.entertainment = entertainment;
+    this.health = health;
+    this.science = science;
+    this.technology = technology;
     this.state = {
       selected: local
     }
@@ -18,7 +23,7 @@ class App extends Component {
 
   changeSelectedNews = (selectedTopic) => {
     console.log(selectedTopic)
-    this.setState({selected: selectedTopic})
+    this.setState({selected: this[selectedTopic]})
   }
 
   render () {
