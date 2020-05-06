@@ -7,7 +7,7 @@
 .app {
   display: flex;
   background: #0a8080;
-  text-align: center;
+  flex-flow: wrap;
   width: 100%;
 }
 
