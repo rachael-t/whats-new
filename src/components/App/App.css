@@ -7,7 +7,11 @@
 .app {
   display: flex;
   background: #0a8080;
-  /* height: 100vh; */
   text-align: center;
   width: 100%;
+}
+
+h3 {
+  color: white;
+  align-items: center;
 }
