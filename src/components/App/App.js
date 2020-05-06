@@ -22,12 +22,22 @@ class App extends Component {
     this.setState({selected: this.state.topics[e.target.name]})
   }
 
+  displayFilteredNews = (input) => {
+    const filteredNews = this.state.selected.filter(article => article.headline.toLowerCase().includes(input));
+    this.setState({selected: filteredNews});
+  }
+
   render () {
+    let errorMessage = '';
+    if(!this.state.selected.length) {
+      errorMessage = <h3>No articles match your search.</h3>
+    }
     return (
       <div className="app">
         <Menu changeSelectedNews={this.changeSelectedNews}/>
-        <SearchForm />
+        <SearchForm displayFilteredNews={this.displayFilteredNews}/>
         <NewsContainer selectedNews={this.state.selected} />
+        {errorMessage}
       </div>
     );
   }
