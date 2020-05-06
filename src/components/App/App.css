@@ -5,9 +5,15 @@
 }
 
 .app {
+  background: #f8f5f2;
   display: flex;
-  background: #0a8080;
-  /* height: 100vh; */
+  flex-flow: wrap;
   text-align: center;
   width: 100%;
+}
+
+h2 {
+  color: #f45d48;
+  margin-left: 40%;
+  margin-top: -10%;
 }
