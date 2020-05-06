@@ -17,9 +17,8 @@ class App extends Component {
     }
   }
 
-  changeSelectedNews = (selectedTopic) => {
-    console.log(selectedTopic)
-    this.setState({selected: this.state.topics[selectedTopic]})
+  changeSelectedNews = (e) => {
+    this.setState({selected: this.state.topics[e.target.name]})
   }
 
   render () {
