@@ -34,8 +34,8 @@ class App extends Component {
     }
     return (
       <div className="app">
-        <Menu changeSelectedNews={this.changeSelectedNews}/>
         <SearchForm displayFilteredNews={this.displayFilteredNews}/>
+        <Menu changeSelectedNews={this.changeSelectedNews}/>
         <NewsContainer selectedNews={this.state.selected} />
         {errorMessage}
       </div>
