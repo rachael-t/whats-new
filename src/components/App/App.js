@@ -30,7 +30,7 @@ class App extends Component {
   render () {
     let errorMessage = '';
     if(!this.state.selected.length) {
-      errorMessage = <h3>No articles match your search.</h3>
+      errorMessage = <h2>No articles match your search.</h2>
     }
     return (
       <div className="app">
