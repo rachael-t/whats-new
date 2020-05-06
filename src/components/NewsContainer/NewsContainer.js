@@ -1,11 +1,13 @@
 import React from 'react';
-import './NewsContainer.css'
-import NewsArticle from '../NewsArticle/NewsArticle'
+import './NewsContainer.css';
+import NewsArticle from '../NewsArticle/NewsArticle';
+import PropTypes from 'prop-types';
 
 const NewsContainer = (props) => {
     const newsArticlesToRender = props.selectedNews.map(newsArticle => {
         return (
            <NewsArticle 
+                key={newsArticle.id}
                 image={newsArticle.img}
                 headline={newsArticle.headline}
                 description={newsArticle.description}
@@ -21,3 +23,7 @@ const NewsContainer = (props) => {
 }
 
 export default NewsContainer;
+
+NewsContainer.propTypes = {
+    selectedNews: PropTypes.array,
+}
