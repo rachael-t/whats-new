@@ -7,6 +7,7 @@ import technology from '../../data/technology';
 import './App.css';
 import NewsContainer from '../NewsContainer/NewsContainer';
 import Menu from '../Menu/Menu';
+import SearchForm from '../SearchForm/SearchForm';
 
 class App extends Component {
   constructor() {
@@ -25,6 +26,7 @@ class App extends Component {
     return (
       <div className="app">
         <Menu changeSelectedNews={this.changeSelectedNews}/>
+        <SearchForm />
         <NewsContainer selectedNews={this.state.selected} />
       </div>
     );
