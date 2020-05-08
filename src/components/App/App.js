@@ -1,19 +1,25 @@
-import React, { Component } from 'react';
-import local from '../../data/local';
+import './App.css';
 import entertainment from '../../data/entertainment';
 import health from '../../data/health';
-import science from '../../data/science';
-import technology from '../../data/technology';
-import './App.css';
-import NewsContainer from '../NewsContainer/NewsContainer';
+import local from '../../data/local';
 import Menu from '../Menu/Menu';
+import NewsContainer from '../NewsContainer/NewsContainer';
+import React, { Component } from 'react';
+import science from '../../data/science';
 import SearchForm from '../SearchForm/SearchForm';
+import technology from '../../data/technology';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      topics: {local, entertainment, health, science, technology},
+      topics: {
+        local, 
+        entertainment, 
+        health, 
+        science, 
+        technology
+      },
       selected: local
     }
   }
