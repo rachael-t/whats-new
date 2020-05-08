@@ -1,9 +1,9 @@
-import React from 'react';
 import './Menu.css';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 const Menu = (props) => {
-   
+
     return(
         <div className='menu-container'>
             <h1>What's New?</h1>
